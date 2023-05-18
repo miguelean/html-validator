@@ -1,7 +1,22 @@
+// ==UserScript==
+// @name         HTML Validator v2
+// @namespace    http://atida.com/
+// @version      0.2
+// @description  try to take over the world!
+// @author       Miguel Angel
+// @match        *://staging.mifarma.es/suadmin/cms/*
+// @icon         https://www.google.com/s2/favicons?sz=64&domain=tampermonkey.net
+// @require      https://raw.githubusercontent.com/miguelean/html-validator/main/main.js
+// @downloadURL  https://raw.githubusercontent.com/miguelean/html-validator/main/main.js
+// @updateURL    https://raw.githubusercontent.com/miguelean/html-validator/main/main.js
+// @grant        none
+// ==/UserScript==
+
 ;(function () {
   'use strict'
 
   const getHtmlError = html => {
+    console.log('Me he Actualizado!')
     const parser = new DOMParser()
     const htmlForParser = `<xml>${html}</xml>`
       .replaceAll(/(src|href)=".*?&.*?"/g, '$1="OMITTED"')
@@ -99,7 +114,6 @@
   }
 
   waitForElm('cms_block_form_content').then(elm => {
-    console.log('Me he Actualizado!')
     const container = elm.parentElement
     container.setAttribute('style', 'position: relative;')
     const validator = document.createElement('div')
