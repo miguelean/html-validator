@@ -99,6 +99,7 @@
   }
 
   waitForElm('cms_block_form_content').then(elm => {
+    console.log('Me he Actualizado!')
     const container = elm.parentElement
     container.setAttribute('style', 'position: relative;')
     const validator = document.createElement('div')
