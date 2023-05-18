@@ -1,17 +1,3 @@
-// ==UserScript==
-// @name         HTML Validator v2
-// @namespace    http://atida.com/
-// @version      0.2
-// @description  try to take over the world!
-// @author       Miguel Angel
-// @match        *://staging.mifarma.es/suadmin/cms/*
-// @icon         https://www.google.com/s2/favicons?sz=64&domain=tampermonkey.net
-// @require      https://raw.githubusercontent.com/miguelean/html-validator/main/main.js
-// @downloadURL  https://raw.githubusercontent.com/miguelean/html-validator/main/main.js
-// @updateURL    https://raw.githubusercontent.com/miguelean/html-validator/main/main.js
-// @grant        none
-// ==/UserScript==
-
 ;(function () {
   'use strict'
 
